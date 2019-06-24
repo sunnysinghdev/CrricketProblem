@@ -7,15 +7,17 @@ namespace Cricket
 {
     class Player
     {
-        public int[] scoreBag;
+        private int[] scoreBag;
         int _runsScored = 0;
         int _ballPlayed = 0;
         bool _batted = false;
-        string name = "";
-        bool isOut = false;
         Random rnd = new Random();
+
+        public string name = "";
+        public bool isOut = false;
         public Player(string name, int[] probablityArray)
         {
+            this.name = name;
             generateProbablity(probablityArray);
         }
 
